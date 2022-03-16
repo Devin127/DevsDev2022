@@ -1,23 +1,21 @@
 <?php 
-
 include ('database.php');
+$_POST_['type'] = 'user';
 if(isset($_POST['submit'])){
-    $firstName = $_POST['firstName'];
-    htmlentities($firstName);
-    $surName = $_POST['surName'];
-    htmlentities($surName);
+    $name = $_POST['name'];
+    htmlentities($name);
     $email = $_POST['email'];
     filter_var($email, FILTER_VALIDATE_EMAIL);
     htmlentities($email);
-    $userType = $_POST['userType'];
-    htmlentities($userType);
+    $type = $_POST['type'];
+    htmlentities($type);
     $password = $_POST['password'];
     htmlentities($password);
     md5($password);
-    $stmt->bind_param("sssss", $firstName, $surName, $email, $userType, $password);
-    // $sql = "Select * from users where firstName = '$firstName'";
+    $stmt->bind_param("sssss", $name, $email, $type, $password);
+    $sql = "Select * from users where name = '$name'";
     $sql = "INSERT INTO users 
-    (firstName, surName, email, userType, password) VALUES ('$firstName', '$surName', '$email', '$userType', '$password')";
+    (id, name, email, type, password) VALUES (' ', '$name', '$email', '$type', '$password')";
     if(mysqli_query($conn, $sql)){
         header ("Location: index.php");
         echo "connected";
@@ -26,20 +24,19 @@ if(isset($_POST['submit'])){
     }
     mysqli_close($conn);
 }
+
 if(isset($_POST['submit'])){
-    $_SESSION['firstName'] = $_POST['firstName'];
-    $_SESSION['surName'] = $_POST['surName'];
+    $_SESSION['name'] = $_POST['name'];
     $_SESSION['email'] = $_POST['email'];
-    $_SESSION['userType'] = $_POST['userType'];
+    $_SESSION['type'] = $_POST['type'];
     $_SESSION['password'] = $_POST['password'];
 }
 $stmt->execute();
 
 if(isset($_POST['submit'])){
-    $firstName = $_SESSION['firstName'];
-    $surName = $_SESSION['surName'];
+    $name = $_SESSION['name'];
     $email = $_SESSION['email'];
-    $userType = $_SESSION['userType'];
+    
 }
 
 ?>

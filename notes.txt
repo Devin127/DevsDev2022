@@ -1,0 +1,10 @@
+Get Register Working
+
+Get slim Working
+
+add styling 
+
+get cart to build a table for a user
+
+get axios to work with the database
+

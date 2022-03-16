@@ -1,14 +1,15 @@
-<?php      
+<?php   
+include 'database.php';   
    // SHOPPING CART LOGIC
 if(isset($_POST['add_to_cart']))
 {
-    $id = $_GET['id'];
+    $productID = $_GET['id'];
     $quantity = $_POST['quantity'];
-    $query = "SELECT * FROM product WHERE id = $id";
+    $query = "SELECT * FROM products WHERE productID = $productID";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result);
     $item_array = array(
-        'id' => $_GET['id'],
+        'productID' => $_GET['id'],
         'productName' => $row['productName'],
         'price' => $row['price'],
         'quantity' => $quantity
@@ -21,7 +22,7 @@ if(isset($_GET['action']))
     {
         foreach($_SESSION['shopping_cart'] as $keys => $values)
         {
-            if($values['id'] == $_GET['id'])
+            if($values['productID'] == $_GET['id'])
             {
                 unset($_SESSION['shopping_cart'][$keys]);
                 // echo '<script>alert("Item Removed")</script>';

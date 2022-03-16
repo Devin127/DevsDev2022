@@ -3,8 +3,8 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     session_start();
-    // include 'database.php';
-    // include 'cartProcess.php';
+    include 'database.php';
+    include 'cartProcess.php';
     // include 'registerProcess.php';
     // include 'loginProcess.php';
     
@@ -22,12 +22,13 @@
             rel="stylesheet" 
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
-            <link href="../../FullStackOnlineStoreFinalCodespaceAcademy/CSS/styleHomePage.css" rel="stylesheet" type="text/css">
-            <link href="../../FullStackOnlineStoreFinalCodespaceAcademy/CSS/styleCart.css" rel="stylesheet" type="text/css">
+            <link href="CSS/styleHomePage.css" rel="stylesheet" type="text/css">
+            <link href="CSS/styleCart.css" rel="stylesheet" type="text/css">
         </head>
         <body>
             <div class="container-fluid">
-                <div class="navbar"><img src="../Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
+                <p>Welcome to DevsDev</p>
+                <div class="navbar"><img src="Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
                     <ul class="menu">       
                         <li ><a href="">Shop</a></li>
                         <li ><a href="">Projects</a></li>
@@ -70,7 +71,7 @@
                                     <td><?php echo $values["quantity"]; ?></td>
                                     <td><?php echo $values["price"]; ?> Coins</td>
                                     <td><?php echo number_format($values["quantity"] * $values["price"], 2);?> Coins</td>
-                                    <td><a href="index.php?action=delete&id=<?php echo $values["id"]; ?>"><button class="btn btn-danger">Remove from cart</button></a></td>
+                                    <td><a href="index.php?action=delete&id=<?php echo $values["productID"]; ?>"><button class="btn btn-danger">Remove from cart</button></a></td>
                                 </tr>
                                     <?php
                                         $total = $total + ($values["quantity"] * $values["price"]);
@@ -97,13 +98,13 @@
             ?>
         <!-- Make Products display with APi and not like this  -->
             <div class="container-fluid">
-            <!-- <img src="../../FullStackOnlineStoreFinalCodespaceAcademy/Images/cover1.jpeg" class="img-fluid" alt="Responsive image"> -->
+            <!-- <img src="/Images/cover1.jpeg" class="img-fluid" alt="Responsive image"> -->
             <section>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
                             <?php
-                                $query = 'SELECT * FROM product ORDER BY id ASC';
+                                $query = 'SELECT * FROM products ORDER BY productID ASC';
                                 $result = mysqli_query($conn,$query);
                                 if(mysqli_num_rows($result) > 0){
                                     while($row = mysqli_fetch_assoc($result)){
@@ -111,14 +112,14 @@
                                         <div class="col-md-3">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <form method="post" action="index.php?action=add&id='.$row['id'].'">
+                                                    <form method="post" action="index.php?action=add&id='.$row['productID'].'">
                                                         <div class="product">
                                                             <img src="'.$row['productImage'].'" alt="">
                                                             <h4 class="text-info">'.$row['productName'].'</h4>                                            
                                                             <h4 class="text-muted">'.$row['price'].' Coins</h4>
-                                                            <p class="text-muted">'.$row['product description'].'</p>
+                                                            <p class="text-muted">'.$row['productDescription'].'</p>
                                                             <input type="number" name="quantity" class="form-control" value="1">
-                                                            <input type="hidden" name="productName" value="'.$row['id'].'">
+                                                            <input type="hidden" name="productName" value="'.$row['productID'].'">
                                                             <input type="hidden" name="price" value="'.$row['price'].'">
                                                             <input type="submit" name="add_to_cart" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" value="Add to Cart">
                                                         </div>
@@ -136,14 +137,7 @@
             </section>
             <h1> About </h>
             <p>
-                This is my shop showcasing my ability as a Software Developer
-                I have Built this as a Full stack store to showcase most of the 
-                various technologies and languages i have learned throughout my course
-                at code space academy. I have used Bootstrap as my CSS framework, 
-                as well as a bit of animation with plain CSS. This site connects to a mySQL 
-                database using PHP, it has User Authentication with PHP and a shopping cart using
-                that intergrates axios(AJAX) and Slim to process API's. I use some OOP to 
-                Show i can use it. You can view my completed projects aswell. I will keep improving this site as my skills develop. 
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel blandit porttitor, nisl nunc egestas nisi, euismod aliquam nisl nunc eget nunc.
                 
             </p>
             </div>

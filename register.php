@@ -12,7 +12,7 @@ include_once ('registerProcess.php');
             rel="stylesheet" 
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../FullStackOnlineStoreFinalCodespaceAcademy/CSS/styleLogin.css">    
+        <link rel="stylesheet" type="text/css" href="CSS/styleLogin.css">    
     </head>
     <body>
     <section class="h-100 gradient-form" style="background-color: #eee;">
@@ -24,15 +24,12 @@ include_once ('registerProcess.php');
                                 <div class="col-lg-6">
                                     <div class="card-body p-md-5 mx-md-4">
                                         <div class="text-center">
-                                            <img src="../Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
+                                            <img src="Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
                                             <h4 class="mt-1 mb-5 pb-1">Welcome to DevsDev</h4>
                                         </div>
-                                        <form action="index.php.php" method="POST">
+                                        <form action="index.php" method="POST">
                                             <div class="form-outline mb-4">
-                                                <input id="firstName" type="text" name="firstName" placeholder="Your First name" required>
-                                            </div>
-                                            <div class="form-outline mb-4">
-                                                <input id="surName" type="text" name="surName" placeholder="Your Surname" required>
+                                                <input id="name" type="text" name="name" placeholder="Your First name" required>
                                             </div>
                                             <div class="form-outline mb-4">
                                                 <input id="email" type="email" name="email" placeholder="Your Email Address" required>
@@ -49,7 +46,9 @@ include_once ('registerProcess.php');
                                             </div>
                                         </form>
                                         <div class="d-flex align-items-center justify-content-center pb-4">
-                                        <a href="login.php"><input href="register.php" type="button" class="btn btn-outline-danger" value="Already have an account? Login here"></input></a>
+                                            
+                                            <a href="login.php" class="btn btn-outline-danger">Already have an account? Login here</a>
+                                            <a href="index.php" type="button" class="btn btn-outline-danger">Home</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,15 +1,15 @@
 <?php
-   $servername='localhost:3306';
+   $servername='localhost:8889';
    $username='root';
    $password='root';
-   $dbname ='devdev';
+   $dbname ='store';
 
    $conn=mysqli_connect($servername,$username,$password,"$dbname");
-   $query ='SELECT * FROM product ORDER BY id ASC';
+   $query ='SELECT * FROM products ORDER BY id ASC';
    $result = mysqli_query($conn,$query);
 
    
-   $stmt = $conn->prepare("INSERT INTO users (firstName, surName, email, userType, password) VALUES (?, ?, ?, ?, ?)");
+   $stmt = $conn->prepare("INSERT INTO users (name, email, type, password) VALUES (?, ?, ?, ?)");
       if(!$conn){
          die('Failed to Connect to database'.mysqli_connect_error());
       }

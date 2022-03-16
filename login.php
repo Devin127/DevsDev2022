@@ -13,7 +13,7 @@ include ('loginProcess.php');
             rel="stylesheet" 
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../FullStackOnlineStoreFinalCodespaceAcademy/CSS/styleLogin.css">
+        <link rel="stylesheet" type="text/css" href="CSS/styleLogin.css">
         
     </head>
     <body>
@@ -26,7 +26,7 @@ include ('loginProcess.php');
                                 <div class="col-lg-6">
                                     <div class="card-body p-md-5 mx-md-4">
                                         <div class="text-center">
-                                            <img src="../Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
+                                            <img src="Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
                                             <h4 class="mt-1 mb-5 pb-1">Welcome to DevsDev</h4>
                                         </div>
                                         <form action="index.php" method="POST">
@@ -42,9 +42,10 @@ include ('loginProcess.php');
                                                 <a class="text-muted" href="#!">Forgot password?</a>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center pb-4">
-                                                <p class="mb-0 me-2">Don't have an account?</p>
-                                                <a href="register.php"><input href="register.php" type="button" class="btn btn-outline-danger" value="Register"></input></a>
+                                                <p class="mb-0 me-2">Don't have an account?</p><a href="register.php" type="button" class="btn btn-outline-danger">Register</a>
                                             </div>
+                                                <a href="index.php"></a>
+                                                <a href="register.php" type="button" class="btn btn-outline-danger">Home</a>
                                         </form>
                                     </div>
                                 </div>
