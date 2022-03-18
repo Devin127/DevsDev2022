@@ -13,14 +13,4 @@
       if(!$conn){
          die('Failed to Connect to database'.mysqli_connect_error());
       }
-      // if(isset($_POST['submit'])){
-      //    $firstName = $_POST['firstName'];
-      //    $surName = $_POST['surName'];
-      //    $email = $_POST['email'];
-      //    $userType = $_POST['userType'];
-      //    $password = $_POST['password'];
-      //    $stmt->bind_param("sssss", $firstName, $surName, $email, $userType, $password);
-      //    $stmt->execute();
-      //    header ("Location: index.php");
-      // }
 ?>

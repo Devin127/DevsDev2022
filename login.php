@@ -38,7 +38,7 @@ include ('loginProcess.php');
                                                 <input type="password" name="password" placeholder="Your Password" required class="form-control" />         
                                             </div>
                                             <div class="text-center pt-1 mb-5 pb-1">
-                                                <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" value="Log in"></input>
+                                                <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit" id="submit" value="Log in"></input>
                                                 <a class="text-muted" href="#!">Forgot password?</a>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center pb-4">

@@ -1,6 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
-include_once ('registerProcess.php');
+include_once 'registerProcess.php';
+echo " hello world";
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +47,7 @@ include_once ('registerProcess.php');
                                                 <input id="password2" type="password" name="password2" placeholder="Confirm Password" required>
                                             </div>
                                             <div class="text-center pt-1 mb-5 pb-1">
-                                                <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" value="Register"></input>
+                                                <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit" id="submit" value="Register"></input>
                                                 <a class="text-muted" href="#!">Terms and Conditions</a>
                                             </div>
                                         </form>
@@ -74,6 +80,12 @@ include_once ('registerProcess.php');
             crossorigin="anonymous"></script>
     </body>
 </html>
+<?php 
+if(isset($_POST['submit'])){
+    $type = "user";
+    
+}
+?>
 
 
 
