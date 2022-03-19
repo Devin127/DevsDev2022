@@ -4,8 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 include_once 'registerProcess.php';
-echo " hello world";
-
 
 ?>
 <!DOCTYPE html>
@@ -80,12 +78,7 @@ echo " hello world";
             crossorigin="anonymous"></script>
     </body>
 </html>
-<?php 
-if(isset($_POST['submit'])){
-    $type = "user";
-    
-}
-?>
+
 
 
 

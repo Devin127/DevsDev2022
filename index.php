@@ -17,6 +17,7 @@
             crossorigin="anonymous">
             <link href="CSS/styleHomePage.css" rel="stylesheet" type="text/css">
             <link href="CSS/styleCart.css" rel="stylesheet" type="text/css">
+            
         </head>
         <body>
             <div class="container-fluid">
@@ -32,6 +33,6 @@
                     </ul>
                 </div>
             </div>
-           
+            <script src="/JS/apiSetup.js"></script>
         </body>
     </html>

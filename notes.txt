@@ -1,6 +1,6 @@
-Get Register Working
+Get Register Working 
 
-Get slim Working
+Get slim Working Done 
 
 add styling 
 
