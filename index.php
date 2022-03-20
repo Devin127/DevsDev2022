@@ -17,15 +17,25 @@
             crossorigin="anonymous">
             <link href="CSS/styleHomePage.css" rel="stylesheet" type="text/css">
             <link href="CSS/styleCart.css" rel="stylesheet" type="text/css">
-            
+            <!-- add vue.js -->
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         </head>
         <body>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-center">Welcome to DevsDev</h1>
+                <p class="text-center">{{Because my name is Devin and i am a Developer}}</p>
+              </div>
+            </div>
+        </div>
             <div class="container-fluid">
-                <p>Welcome to DevsDev</p>
+                
                 <div class="navbar"><img src="Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
                     <ul class="menu">       
                         <li ><a href="shop.php">Shop</a></li>
-                        <li ><a href="projects.php">Projects</a></li>
+                        <li ><a href="about.php">About</a></li>
                         <li ><a href="contact.php">Contact</a></li>
                         <li ><a id="userLogin" href="login.php">Login</a></li>
                         <li ><a id="userReg" href="register.php">Register</a></li>
@@ -33,6 +43,13 @@
                     </ul>
                 </div>
             </div>
-            <script src="/JS/apiSetup.js"></script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+            crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+            crossorigin="anonymous"></script>
         </body>
     </html>

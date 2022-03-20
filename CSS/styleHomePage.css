@@ -43,6 +43,7 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         font-weight: bold;
         color: aliceblue;
         transition: all .3s ease-in-out;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
     }
 
     .navbar .menu{
@@ -58,6 +59,7 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         transform: (0);
         transition: transform 1.4s 0.07s;
         z-index: -1;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
 
     }
 
@@ -65,6 +67,7 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         transition: transform 0.4s 0.08s, z-index 0s 0.5s;
         transform: scale(1);
         z-index: 1;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
     }
 
     .navbar .menu li{
@@ -78,6 +81,7 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
 
     .navbar:hover .menu li{
         transition: all 0.7s;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
         
     }
 
@@ -93,6 +97,7 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         font-size: 55%;
         position: absolute;
         transition: 0.7s;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
     }
    
     /* Products */
@@ -166,5 +171,5 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         transform:rotate(420deg);
 
     }
-
  
+
