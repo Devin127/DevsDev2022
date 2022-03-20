@@ -28,6 +28,15 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         }
     }
 
+    .card {
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+        margin-bottom: 40px;
+        
+        border-radius: 10px;
+        height: 300px;
+        
+    }
+
     /* Round Navbar */
     .navbar {
         width: 150px;
@@ -171,5 +180,16 @@ background-image: radial-gradient(farthest-corner at 40px 40px,
         transform:rotate(420deg);
 
     }
- 
+
+    .smoke {
+        border: #2b2843 solid 1px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+    }
+
+    .smoke:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+    }
+    
 

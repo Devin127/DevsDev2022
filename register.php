@@ -4,7 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 include_once 'registerProcess.php';
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,12 +47,11 @@ include_once 'registerProcess.php';
                                                 <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit" id="submit" value="Register"></input>
                                                 <a class="text-muted" href="#!">Terms and Conditions</a>
                                             </div>
+                                            <div class="d-flex align-items-center justify-content-center pb-4">
+                                                <a href="login.php" class="btn btn-outline-danger">Already have an account? Login here</a>
+                                                <a href="index.php" type="button" class="btn btn-outline-danger">Home</a>
+                                            </div>
                                         </form>
-                                        <div class="d-flex align-items-center justify-content-center pb-4">
-                                            
-                                            <a href="login.php" class="btn btn-outline-danger">Already have an account? Login here</a>
-                                            <a href="index.php" type="button" class="btn btn-outline-danger">Home</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -68,8 +66,6 @@ include_once 'registerProcess.php';
                 </div>
             </div>
         </section>
-        
-
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
             crossorigin="anonymous"></script>
