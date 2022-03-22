@@ -1,0 +1,54 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+
+background-size: 100% 100%;
+background-image: radial-gradient(farthest-corner at 40px 40px,
+      rgb(248, 243, 243) 20%, rgb(100, 166, 201) 100%,#ddd 100%);
+}
+
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #2c3e6b;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #4694e8, #2851da, #0c2c94, #2b2843);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4694e8, #2851da, #0c2c94, #2b2843);
+    }
+    @media (min-width: 768px) {
+        .gradient-form {
+            height: 100vh !important;
+        }
+    }
+    @media (min-width: 769px) {
+        .gradient-custom-2 {
+            border-top-right-radius: .3rem;
+            border-bottom-right-radius: .3rem;
+        }
+    }
+
+    .card {
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+        margin-bottom: 40px;
+        
+        border-radius: 10px;
+        height: 300px;
+        
+    }
+
+    
+
+    .smoke {
+        border: #2b2843 solid 1px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+    }
+
+    .smoke:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+    }
+    
+

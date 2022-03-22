@@ -1,10 +1,3 @@
 Get Register and Login Working 
-
-Get slim Working Done 
-
-add styling 
-
-get cart to build a table for a user
-
-get axios to work with the database Done
+    save user session cart. 
 

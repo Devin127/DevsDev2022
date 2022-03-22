@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
-include_once 'registerProcess.php';
+include 'registerProcess.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,10 @@ include_once 'registerProcess.php';
             rel="stylesheet" 
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="CSS/styleLogin.css">    
+        <link rel="stylesheet" type="text/css" href="CSS/styleLogin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">    
     </head>
     <body>
     <section class="h-100 gradient-form" style="background-color: #eee;">
@@ -30,7 +33,7 @@ include_once 'registerProcess.php';
                                             <img src="Images/DevsDev_Logo.png" style="width: 185px;" alt="logo">
                                             <h4 class="mt-1 mb-5 pb-1">Welcome to DevsDev</h4>
                                         </div>
-                                        <form action="index.php" method="POST">
+                                        <form action="registerProcess.php" method="POST">
                                             <div class="form-outline mb-4">
                                                 <input id="name" type="text" name="name" placeholder="Your First name" required>
                                             </div>
