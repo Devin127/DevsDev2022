@@ -20,18 +20,19 @@
             
         </head>
         <body>
-            <div class="container">
-                <nav class="navigationWrapper">
+        <nav class="navbar sticky-top">
+            <div class="navigationWrapper">
                     <img src="Images/DevsDev_Logo.png" width="100px" alt="logo">
                     <ul class="navigation">
                         <li class="navlist"><a class="link" href="index.php">Home</a></li>
                         <li class="navlist"><a class="link" href="about.php">About</a></li>
-                        <li class="navlist"><a class="link" href="store.php">Store</a></li>
+                        <li class="navlist"><a class="link" href="shop.php">Shop</a></li>
                         <li class="navlist"><a class="link" href="register.php">Register</a></li>
                         <li class="navlist"><a class="link" href="login.php">Login</a></li>
                     </ul>
-                </nav>
             </div>
+                </nav>
+            
             <!-- contact me page -->
             <div class="container">
                 <div class="row">

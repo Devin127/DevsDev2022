@@ -11,9 +11,8 @@
             rel="stylesheet" 
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
-            <link href="CSS/generalStyle.css" rel="stylesheet" type="text/css">
-            <link href="CSS/styleCart.css" rel="stylesheet" type="text/css">
             <link href="CSS/navbar.css" rel="stylesheet" type="text/css">
+            <link href="CSS/about.css" rel="stylesheet" type="text/css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -21,35 +20,112 @@
             <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         </head>
         <body>
-            <div class="container">
-                <nav class="navigationWrapper">
-                    <img src="Images/DevsDev_Logo.png" width="100px" alt="logo">
-                    <ul class="navigation">
-                        <li class="navlist"><a class="link" href="index.php">Home</a></li>
-                        <li class="navlist"><a class="link" href="shop.php">Shop</a></li>
-                        <li class="navlist"><a class="link" href="contact.php">Contact</a></li>
-                        <li class="navlist"><a class="link" href="register.php">Register</a></li>
-                        <li class="navlist"><a class="link" href="login.php">Login</a></li>
-                    </ul>
+        <div id="top"></div>
+  
+
+            <!-- <div class="container"> -->
+            
+                <nav class="navbar sticky-top">
+                    <div class="navigationWrapper">
+                        <img src="Images/DevsDev_Logo.png" width="100px" alt="logo">
+                        <ul class="navigation">
+                            <li class="navlist"><a class="link" href="index.php">Home</a></li>
+                            <li class="navlist"><a class="link" href="shop.php">Shop</a></li>
+                            <li class="navlist"><a class="link" href="contact.php">Contact</a></li>
+                            <li class="navlist"><a class="link" href="register.php">Register</a></li>
+                            <li class="navlist"><a class="link" href="login.php">Login</a></li>
+                        </ul>
+                    </div>
                 </nav>
-            </div>
+                
+            <!-- </div> -->
+            
             <!-- About me section -->
+            
             <div class="container">
+                
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center" >About Me</h1>
+                        <h1 class="text-center" id="about" >About</h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <p class="text-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Fuga deserunt nisi laboriosam laborum, 
-                            molestias ipsum magnam dolorum voluptas assumenda pariatur. 
-                            Quam illo hic aliquid sequi deserunt. Aut perferendis magnam modi.
+                            <h4>About this Site</h4>
+                            This site acts as a fullstack store to showcase what i have learned through <a href="https://www.codespace.co.za/">CodeSpace Academy</a>.
+                            Animation and stylling has been done with CSS and Bootsrap.
+                            mySQL, PHP, Axios, Slim and ThunderClient have been used to create a database, User Authentication and Api for this site.
+                            Javascript, Vue.js and OOP has been used for front end development.
+                            I have used my Tech Stack as the products in my store. 
+                            <br>
+                            <hr>
+                            <h4>About me</h4>
+                            HI, I'm a fullstack developer. I have a passion for coding and creating.
+                            I have a background in Mechanical Engineering for 10 years and have been working in the IT industry for 1 year while studying Software Development.
+                            I have a passion for learning new things and I am always looking to improve my skills.
+                            When i am not coding i am training in Muay Thai and MMA or playing pc games.
+                            <br>
+                            <a href="https://github.com/Devin127"><img src="Images/github.png"></a>
+                            <br>
                         </p>
                     </div>
+                    <div class="col-md-6">
+                        <div class="myPic">
+                            <img src="Images/me.jpg" alt="about me" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Projects -->
+<div class="container">
+    <div class="text-center">
+        <h1> My Projects</h1>
+        <p class="text-center"><del>the ones that work</del> ~some of them</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+        <div class="card h-100">
+            <img src="Images/Furniture.JPG" class="card-img-top" alt="Furniture">
+            <div class="card-body">
+            <h5 class="card-title">Furniture shop with Vue.js</h5>
+            <p class="card-text">Basic Online Furniture store made with Vue.js</p>
+            </div>
+            <div class="card-footer">
+            <small class="text-muted"><a href="https://github.com/Devin127/FurnitureShop">Furniture Shop With Vue.js</a></small>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="Images/bookingApp.JPG" class="card-img-top" alt="Hotel">
+            <div class="card-body">
+            <h5 class="card-title">Hotel booking app</h5>
+            <p class="card-text">Hotel Booking app that generates random Hotels and Packages</p>
+            </div>
+            <div class="card-footer">
+            <small class="text-muted"><a href="https://github.com/Devin127/Holidaze">HoliDaze</a></small>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="Images/UAPLibrary.JPG" class="card-img-top" alt="Library">
+            <div class="card-body">
+            <h5 class="card-title">Library based user authentication App</h5>
+            <p class="card-text">A UAP App with different types of Authorisations based on User type </p>
+            </div>
+            <div class="card-footer">
+            <small class="text-muted"><a href="https://github.com/Devin127/AUP-V3">Only-Books</a></small>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
 
                             
 
@@ -58,6 +134,10 @@
 
 
 
+            <!-- Back to top button smooth scroll -->
+            <button  class="top">
+                <a href="#top" class="scroll">Back to Top</a>
+            </button>
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
                 integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 

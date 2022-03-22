@@ -16,7 +16,7 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
             crossorigin="anonymous">
             <link href="CSS/generalStyle.css" rel="stylesheet" type="text/css">
-            <link href="CSS/styleCart.css" rel="stylesheet" type="text/css">
+            
             <link href="CSS/navbar.css" rel="stylesheet" type="text/css">
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script>'https://unpkg.com/vuex@4.0.0/dist/vuex.global.js'</script>
@@ -24,23 +24,23 @@
         </head>
         <body>
             
-            <div class="container">
-            <nav class="navigationWrapper">
+        <nav class="navbar sticky-top">
+            <div class="navigationWrapper">
                 <img src="Images/DevsDev_Logo.png" width="100px" alt="logo">
-            <ul class="navigation">
-                <li class="parent"><a class="link" href="index.php">Home</a></li>
-                <li class="parent"><a class="link" href="about.php">About</a></li>
-                <li class="parent"><a class="link" href="contact.php">Contact</a></li>
-                <li class="parent"><a class="link" href="register.php">Register</a></li>
-                <li class="parent"><a class="link" href="login.php">Login</a></li>
-            </ul>
+                <ul class="navigation">
+                    <li class="parent"><a class="link" href="index.php">Home</a></li>
+                    <li class="parent"><a class="link" href="about.php">About</a></li>
+                    <li class="parent"><a class="link" href="contact.php">Contact</a></li>
+                    <li class="parent"><a class="link" href="register.php">Register</a></li>
+                    <li class="parent"><a class="link" href="login.php">Login</a></li>
+                </ul>
+            </div>
         </nav>
-        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                        <h1 class="text-center">The Shop</h1>
-                        <p class="text-center">Made with: HTML, CSS, PHP, mySQL, AXIOS, Vue.js, Bootstrap and Javascript</p>
+                        <h1 class="text-center">The Shop<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="Images/cart.png" ></button></h1>
+                        <p class="text-center">Made with: HTML, CSS, PHP, mySQL, AXIOS, Vue.js, OOP, Bootstrap and Javascript</p>
                 </div>
             </div>
         </div>
@@ -49,46 +49,27 @@
                     <div id="app" >
                         <div class="row">
                             <div class="col-md-12" >
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Your Cart
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <h3 class="text-center">Your Cart</h3>
-                                                <table class="table">
-                                                    <tr>
-                                                        <th class="col-md-3 text-center">Product</th>
-                                                        <th class="col-md-3 text-center">Price</th>
-                                                        <th class="col-md-3 text-center">Quantity</th>
-                                                        <th class="col-md-3 text-center">Add</th>
-                                                        <th class="col-md-3 text-center">Total</th>
-                                                        <th class="col-md-3 text-center">Remove</th>
-                                                    </tr>
-                                                    <tr v-for="(product, index) in cart">
-                                                        <td class ="text-center">{{ product.productName }}</td>
-                                                        <td class ="text-center">{{ product.price }} Coins</td>
-                                                        <td class ="text-center">{{ product.quantity }}</td>
-                                                        <td class ="text-center"><button class="btn btn-success" @click="addToCart(product)">+</button></td>
-                                                        <td class ="text-center">{{ product.price * product.quantity }} Coins</td>
-                                                        <td class ="text-center"><button class="btn btn-danger" @click="removeFromCart(product)">-</button></td>
-                                                    </tr>
-                                                    <!-- Add clear cart -->
-                                                    <tr>
-                                                        <td class ="text-center"></td>
-                                                        <td class ="text-center"></td>
-                                                        <td class ="text-center"></td>
-                                                        <td class ="text-center"></td>
-                                                        <td class ="text-center">{{ total }} Coins</td>
-                                                        <td class ="text-center"><button class="btn btn-danger" @click="clearCart()">Clear Cart</button></td>
-                                                    
-                                                </table>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Your Cart</h5>
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <h3 class="text-center">Total: {{ total }} Coins </h3>
+                                        <button class="btn btn-danger" @click="clearCart()">Empty</button>
+                                        <div class="col" v-for="(product, index) in cart">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class ="text-center">{{ product.productName }}</h5>
+                                                    <p class="card-text"> Price {{ product.price }} Coins</p>
+                                                    <p class="card-text"><button class="btn btn-danger" @click="removeFromCart(product)">-</button> {{ product.quantity }} <button class="btn btn-success" @click="addToCart(product)">+</button> </p>
+                                                    <p class="card-text"> Sub: {{ product.price * product.quantity }} Coins</p>
+                                                </div>
                                             </div>
                                         </div>
+                                        <button class = "btn btn-success" @click="checkout()">Checkout</button>
                                     </div>
+                                </div>
                                     <br>
                             <!-- Shop -->
                             <div class="row">

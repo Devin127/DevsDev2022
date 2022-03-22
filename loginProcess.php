@@ -1,21 +1,32 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
-if(isset($_POST['submit'])){
-    extract($_POST);
-    include ('database.php');
-    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-    $row = mysqli_fetch_array(mysqli_query($conn,$sql));
-    $_SESSION['id'] = getid($row['id']);
-    if(is_array($row)){
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['password'] = $row['password'];
-        $_SESSION['name'] = $row['name'];
-        
-        header('location:index.php');
-} else {
-    echo "Login Failed";
-}
+include 'database.php';
+if(isset($_POST['email']) && isset($_POST['password'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result) > 0){
+        $row = mysqli_fetch_assoc($result);
+        if(password_verify($password, $row['password'])){
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['password'] = $row['password'];            
+            header('Location: index.php');
+        }else{
+            echo '<div class="alert alert-danger">
+            <strong>Error!</strong> Wrong password.
+            </div>';
+        }
+    }else{
+        echo '<div class="alert alert-danger">
+        <strong>Error!</strong> Wrong email.
+        </div>';
+    }
 }
 ?>
 

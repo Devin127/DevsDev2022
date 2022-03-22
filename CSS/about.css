@@ -1,0 +1,18 @@
+* {
+    
+    font-family: 'Share Tech Mono', monospace;
+}
+.card {
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(21, 18, 189);
+}
+
+.myPic {
+    box-shadow: 0 5px 15px 0 rgba(34, 87, 167, 0.25);
+    border: solid black 4px;
+    
+}
