@@ -1,6 +1,6 @@
  <?php 
 session_start();
-include ('loginProcess.php');
+
 ?>
 
 <!DOCTYPE html>

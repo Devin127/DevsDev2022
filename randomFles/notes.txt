@@ -1,3 +1,18 @@
-Get Register and Login Working 
-    save user session cart. 
 
+  // PSEUDO CODE 
+    vue cart  pushes products to cart from APi
+    API comes from products table
+    vue cart  pushes products to cart from APi
+
+    cart array is temporary and is in JSON format
+    I need cart array in php format
+    how do i get the cart array in php format?
+
+
+    $_SESSION['id'] = signed in user id
+
+        $_SESSION['cart'] = array of products in cart
+
+    send $_SESSION['cart'] + $_SESSION['id'] to cart.php
+
+    
