@@ -5,11 +5,9 @@
                 require '../vendor/autoload.php';
 
                 $app = new \Slim\App;
-                // 1.) Var_dump succesfully executed at this point 
-                // var_dump($app);
-
+                
                 $app->get('/products', function (Request $request, Response $response, array $args) {
-                    // require_once 'database.php';
+           
                     $servername='localhost:8889';
                     $username='root';
                     $password='root';

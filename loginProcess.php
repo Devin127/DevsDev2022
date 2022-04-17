@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         $_SESSION['password'] = $row['password'];
         $_SESSION['name'] = $row['name'];
         
-        header('location:index.php');
+        header('location:index.html');
 } else {
     echo "Login Failed";
 }

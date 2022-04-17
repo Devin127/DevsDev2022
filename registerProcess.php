@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conn, $sql);
     if($result){
         echo '<script>alert("Registration Successful!")</script>';
-        header("Location: login.php");
+        header("Location: login.html");
     }
     else{
         echo '<script>alert("Registration Failed!")</script>';
