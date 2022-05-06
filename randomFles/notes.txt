@@ -1,8 +1,0 @@
-
-  seperate backend from front end. 
-    rename files
-
-    create API to upload users. 
-    add unique ID to cart Table. Done
-
-    
